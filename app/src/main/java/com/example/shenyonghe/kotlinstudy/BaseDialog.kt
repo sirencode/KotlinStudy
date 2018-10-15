@@ -6,19 +6,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.Gravity
 import android.view.View
-import android.widget.TextView
 import com.example.shenyonghe.kotlinstudy.util.UIUtil
+import kotlinx.android.synthetic.main.dialog_base.*
 
 /**
  * Created by shenyonghe on 2017/12/27.
  */
 class BaseDialog(context: Context) : Dialog(context), View.OnClickListener {
-
-    private var titleView: TextView? = null
-    private var contentView: TextView? = null
-    private var singleBtn: TextView? = null
-    private var leftBtn: TextView? = null
-    private var rightBtn: TextView? = null
 
     private var title: String? = null
     private var content: String? = null
@@ -49,15 +43,10 @@ class BaseDialog(context: Context) : Dialog(context), View.OnClickListener {
     }
 
     private fun initView() {
-        titleView = findViewById(R.id.tv_title)
-        contentView = findViewById(R.id.tv_content)
-        singleBtn = findViewById(R.id.tv_single)
-        leftBtn = findViewById(R.id.tv_left)
-        rightBtn = findViewById(R.id.tv_right)
         refreshView()
-        singleBtn!!.setOnClickListener(this)
-        leftBtn!!.setOnClickListener(this)
-        rightBtn!!.setOnClickListener(this)
+        tv_single!!.setOnClickListener(this)
+        tv_left!!.setOnClickListener(this)
+        tv_right!!.setOnClickListener(this)
     }
 
     fun setTitle(title: String) {
@@ -82,34 +71,30 @@ class BaseDialog(context: Context) : Dialog(context), View.OnClickListener {
     }
 
     private fun refreshView() {
-        if (titleView != null) {
+        if (tv_title != null) {
             if (!TextUtils.isEmpty(title)) {
-                titleView!!.text = title
+                tv_title!!.text = title
             }
 
             if (!TextUtils.isEmpty(content)) {
-                contentView!!.text = content
-            }
-
-            if (!TextUtils.isEmpty(content)) {
-                contentView!!.text = content
+                tv_content!!.text = content
             }
 
             if (!TextUtils.isEmpty(single)) {
-                singleBtn!!.visibility = View.VISIBLE
-                singleBtn!!.text = single
+                tv_single!!.visibility = View.VISIBLE
+                tv_single!!.text = single
             } else {
-                singleBtn!!.visibility = View.GONE
+                tv_single!!.visibility = View.GONE
             }
 
             if (!TextUtils.isEmpty(left) && !TextUtils.isEmpty(right)) {
-                leftBtn!!.visibility = View.VISIBLE
-                rightBtn!!.visibility = View.VISIBLE
-                leftBtn!!.text = left
-                rightBtn!!.text = right
+                tv_left!!.visibility = View.VISIBLE
+                tv_right!!.visibility = View.VISIBLE
+                tv_left!!.text = left
+                tv_right!!.text = right
             } else {
-                leftBtn!!.visibility = View.GONE
-                rightBtn!!.visibility = View.GONE
+                tv_left!!.visibility = View.GONE
+                tv_right!!.visibility = View.GONE
             }
         }
     }
