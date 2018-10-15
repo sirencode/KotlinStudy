@@ -38,7 +38,7 @@
         android:id="@+id/btn_saveSp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="5dp"
         android:text="saveSp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_showDialog" />
@@ -47,7 +47,7 @@
         android:id="@+id/btn_getSp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="5dp"
         android:text="getSp"
         app:layout_constraintLeft_toRightOf="@+id/btn_saveSp"
         app:layout_constraintTop_toBottomOf="@+id/btn_showDialog" />
@@ -56,9 +56,18 @@
         android:id="@+id/btn_deleteSp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="5dp"
         android:text="deleteSp"
         app:layout_constraintLeft_toRightOf="@+id/btn_getSp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_showDialog" />
+
+    <Button
+        android:id="@+id/btn_go_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Web"
+        app:layout_constraintLeft_toRightOf="@+id/btn_deleteSp"
         app:layout_constraintTop_toBottomOf="@+id/btn_showDialog" />
 
 </android.support.constraint.ConstraintLayout>

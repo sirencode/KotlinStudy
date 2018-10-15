@@ -26,25 +26,28 @@ object UIUtil {
         return density
     }
 
-    public fun getWidth(context: Context): Int {
+    @JvmStatic
+    fun getWidth(context: Context): Int {
         if (width == 0) {
             width = getDisplayMetrics(context)!!.widthPixels
         }
         return width
     }
 
-    public fun getHeight(context: Context): Int {
+    @JvmStatic
+    fun getHeight(context: Context): Int {
         if (height == 0) {
             height = getDisplayMetrics(context)!!.heightPixels
         }
         return height
     }
 
-    public fun dp2px(context: Context, deValue: Int): Int {
+    @JvmStatic
+    fun dp2px(context: Context, deValue: Int): Int {
         return (deValue * getDensity(context) + 0.5f).toInt()
     }
-
-    public fun px2dp(context: Context, pxValue: Int): Int {
+    @JvmStatic
+    fun px2dp(context: Context, pxValue: Int): Int {
         return (pxValue * getDensity(context) + 0.5f).toInt()
     }
 }

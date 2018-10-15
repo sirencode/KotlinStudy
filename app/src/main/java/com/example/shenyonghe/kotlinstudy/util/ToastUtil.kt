@@ -59,6 +59,7 @@ object ToastUtil {
      * @param context
      * @param message
      */
+    @JvmStatic
     fun showToast(context: Context, message: String) {
         if (toast == null) {
             toast = Toast.makeText(context, message, Toast.LENGTH_SHORT)

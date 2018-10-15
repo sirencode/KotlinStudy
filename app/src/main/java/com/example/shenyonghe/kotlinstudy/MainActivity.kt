@@ -4,9 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import com.example.shenyonghe.kotlinstudy.extendutil.startActivity
 import com.example.shenyonghe.kotlinstudy.extendutil.toast
-import com.example.shenyonghe.kotlinstudy.util.DialogBuild
-import com.example.shenyonghe.kotlinstudy.util.SPHelper
-import com.example.shenyonghe.kotlinstudy.util.String2Num
+import com.example.shenyonghe.kotlinstudy.util.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() {
@@ -22,6 +20,7 @@ class MainActivity : Activity() {
         btn_saveSp.setOnClickListener { spHelper.put(key, "hello world") }
         btn_deleteSp.setOnClickListener { spHelper.remove(key) }
         btn_getSp.setOnClickListener { toast(spHelper.getValue(key, "no data") as String) }
+        btn_go_web.setOnClickListener{WebViewActivity.start("https://www.baidu.com/",this)}
     }
 
     fun showDialog() {
@@ -31,7 +30,7 @@ class MainActivity : Activity() {
                 .setTwo("取消", "确定")
                 .setClick(object : BaseDialog.DialogClick {
                     override fun onSingleClick() {
-
+                       LogUtil.LogD("ue","s")
                     }
 
                     override fun onLeftClick() {

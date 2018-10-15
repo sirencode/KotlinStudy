@@ -6,6 +6,7 @@ import android.text.TextUtils
  * Created by shenyonghe on 2017/12/27.
  */
 object String2Num {
+    @JvmStatic
     fun getIntFromString(info: String, defaultValue: Int = 0): Int {
         var tmp = defaultValue;
         if (!TextUtils.isEmpty(info)){
