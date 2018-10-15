@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:toolsL="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_base_dialog_tile"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:textColor="#000"
-        android:textSize="16sp"
-        tools:text="Tile" />
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        toolsL:text="title" />
 
     <TextView
-        android:id="@+id/tv_base_dialog_content"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
-        android:text="hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello" />
+        android:padding="10dp"
+        android:textColor="#ccc"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        toolsL:text="的赵华鹏获得「年度摄影师奖」二等奖，此外还有 11 位中国摄影师获得了动物摄影、建筑摄影等分项奖。" />
 
     <TextView
-        android:id="@+id/tv_base_dialog_know"
+        android:id="@+id/tv_single"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:background="#ccc"
+        android:background="@drawable/bg_basedialog_single"
         android:gravity="center"
-        android:padding="5dp"
-        android:text="知道了"
-        android:textColor="#fff" />
+        android:text="single"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_basedialog_left"
+        android:gravity="center"
+        android:text="left"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_basedialog_right"
+        android:gravity="center"
+        android:text="right"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/tv_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+</android.support.constraint.ConstraintLayout>
