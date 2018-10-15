@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.example.shenyonghe.kotlinstudy.R
-import com.example.shenyonghe.kotlinstudy.R.id.webView
 import kotlinx.android.synthetic.main.acrivity_web.*
 
 /**
