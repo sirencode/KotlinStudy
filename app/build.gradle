@@ -26,4 +26,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     project.ext.dependenciesMethod delegate, rootProject.ext.appDps
+    implementation project(":thirdlib")
 }

@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.view.Gravity
 import android.view.View
 import com.example.shenyonghe.kotlinstudy.util.UIUtil
+import com.example.shenyonghe.kotlinstudy.util.ViewUtil
 import kotlinx.android.synthetic.main.dialog_base.*
 
 /**
@@ -72,21 +73,14 @@ class BaseDialog(context: Context) : Dialog(context), View.OnClickListener {
 
     private fun refreshView() {
         if (tv_title != null) {
-            if (!TextUtils.isEmpty(title)) {
-                tv_title!!.text = title
-            }
-
-            if (!TextUtils.isEmpty(content)) {
-                tv_content!!.text = content
-            }
-
+            ViewUtil.setTVText(tv_title, this!!.title!!)
+            ViewUtil.setTVText(tv_content, this!!.content!!)
             if (!TextUtils.isEmpty(single)) {
                 tv_single!!.visibility = View.VISIBLE
                 tv_single!!.text = single
             } else {
                 tv_single!!.visibility = View.GONE
             }
-
             if (!TextUtils.isEmpty(left) && !TextUtils.isEmpty(right)) {
                 tv_left!!.visibility = View.VISIBLE
                 tv_right!!.visibility = View.VISIBLE

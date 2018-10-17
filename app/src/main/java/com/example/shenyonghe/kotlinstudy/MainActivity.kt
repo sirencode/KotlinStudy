@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.shenyonghe.kotlinstudy.extendutil.startActivity
 import com.example.shenyonghe.kotlinstudy.extendutil.toast
 import com.example.shenyonghe.kotlinstudy.util.*
+import com.example.thirdlib.ThirdAct
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() {
@@ -21,6 +22,7 @@ class MainActivity : Activity() {
         btn_deleteSp.setOnClickListener { spHelper.remove(key) }
         btn_getSp.setOnClickListener { toast(spHelper.getValue(key, "no data") as String) }
         btn_go_web.setOnClickListener{WebViewActivity.start("https://www.baidu.com/",this)}
+        btn_go_third.setOnClickListener { startActivity(ThirdAct::class.java) }
     }
 
     fun showDialog() {

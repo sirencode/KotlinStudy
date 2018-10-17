@@ -30,4 +30,10 @@ ext {
             constraint_layout : "implementation",
             kotlin_stdlib     : "implementation",
     ]
+
+    thirdDps = [
+            support_v7        : "implementation",
+            constraint_layout : "implementation",
+            kotlin_stdlib     : "implementation",
+    ]
 }
