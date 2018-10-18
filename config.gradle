@@ -29,11 +29,21 @@ ext {
             support_v7        : "implementation",
             constraint_layout : "implementation",
             kotlin_stdlib     : "implementation",
+            glide             : "implementation",
+            glide_compiler    : "annotationProcessor",
+            rxjava            : "implementation",
+            rxandroid         : "implementation",
+            okhttp            : "implementation",
+            okhttp_interceptor: "implementation",
+            retrofit          : "implementation",
+            retrofit_goson    : "implementation",
+            retrofit_adapter  : "implementation",
+            recyclerview      : "implementation",
     ]
 
     thirdDps = [
-            support_v7        : "implementation",
-            constraint_layout : "implementation",
-            kotlin_stdlib     : "implementation",
+            support_v7       : "implementation",
+            constraint_layout: "implementation",
+            kotlin_stdlib    : "implementation",
     ]
 }

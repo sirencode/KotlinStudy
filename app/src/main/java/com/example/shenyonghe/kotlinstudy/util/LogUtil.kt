@@ -7,7 +7,6 @@ import android.util.Log
  */
 object LogUtil {
     var isCanLog: Boolean = false
-
     @JvmStatic
     fun LogA(tag: String, msg: String) {
         log(LogType.LogA, tag, msg)

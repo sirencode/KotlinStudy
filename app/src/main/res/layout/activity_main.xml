@@ -79,4 +79,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_go_web" />
 
+    <Button
+        android:id="@+id/btn_getApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="getAPI"
+        app:layout_constraintLeft_toRightOf="@+id/btn_go_third"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_web" />
+
+    <Button
+        android:id="@+id/btn_goList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="goList"
+        app:layout_constraintLeft_toRightOf="@+id/btn_getApi"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_web" />
+
 </android.support.constraint.ConstraintLayout>
